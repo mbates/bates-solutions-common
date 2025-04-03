@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+      - name: Configure Github
+        run: |
+          git config --global user.name 'Mike Bates'
+          git config --global user.email 'mike@bates-solutions.com'
       - name: Update Version
         run: npm version minor
       - name: Update version in Github (should be on main not develop)
