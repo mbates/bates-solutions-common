@@ -18,12 +18,14 @@ jobs:
           git config --global user.email 'mike@bates-solutions.com'
       - name: Update Version
         run: npm version minor
-      - name: Update version in Github (should be on main not develop)
+      - name: Add updated version to develop
         run: |
-          git config --global user.name 'Mike Bates'
-          git config --global user.email 'mike@bates-solutions.com'
           git add .
           git commit -m "Update minor version"
+      - name: Show branch and push
+        run: |
+          git branch
+          git status
           git push
       - name: Build
         run: npm run build
