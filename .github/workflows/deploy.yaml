@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          token: $NPM_TOKEN
       - name: Install Dependencies
         run: npm ci
       - name: Configure Github
@@ -33,5 +32,5 @@ jobs:
         run: npm run build
       - name: Publish to NPM
         run: npm publish
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
