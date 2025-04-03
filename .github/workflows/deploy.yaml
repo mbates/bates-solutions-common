@@ -1,0 +1,25 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Deploy common
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Update Version
+        run: npm version minor
+      - name: Update version in Github (should be on main not develop)
+        run: |
+          git add .
+          git commit -m \"Update minor version\"
+          git push
+      - name: Build
+        run: npm run build
+      - name: Publish to NPM
+        run: npm publish
