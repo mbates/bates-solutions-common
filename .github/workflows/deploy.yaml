@@ -18,14 +18,8 @@ jobs:
           git config --global user.email 'mike@bates-solutions.com'
       - name: Update Version
         run: npm version minor
-      - name: Add updated version to develop
-        run: |
-          git branch
-          git add .
-          git commit -m "Update minor version"
-      - name: Show branch and push
-        run: |
-          git push
+      - name: Update version on github
+        run: git push
       - name: Build
         run: npm run build
       - name: Publish to NPM
