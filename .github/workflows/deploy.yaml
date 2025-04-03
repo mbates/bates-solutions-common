@@ -23,7 +23,7 @@ jobs:
           git config --global user.name 'Mike Bates'
           git config --global user.email 'mike@bates-solutions.com'
           git add .
-          git commit -m \"Update minor version\"
+          git commit -m "Update minor version"
           git push
       - name: Build
         run: npm run build
