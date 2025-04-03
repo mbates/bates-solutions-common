@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+          token: $NPM_TOKEN
+        env: NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install Dependencies
         run: npm ci
       - name: Configure Github
