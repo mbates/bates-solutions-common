@@ -20,12 +20,11 @@ jobs:
         run: npm version minor
       - name: Add updated version to develop
         run: |
+          git branch
           git add .
           git commit -m "Update minor version"
       - name: Show branch and push
         run: |
-          git branch
-          git status
           git push
       - name: Build
         run: npm run build
