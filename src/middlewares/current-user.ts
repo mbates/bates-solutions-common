@@ -1,12 +1,12 @@
-import { Request, Response, NextFunction } from "express";
-import jwt from "jsonwebtoken";
+import { Request, Response, NextFunction } from 'express';
+import jwt from 'jsonwebtoken';
 
 interface UserPayload {
   id: string;
   email: string;
 }
 
-// Add currentUSer to Express Request interface
+// Add currentUser to Express Request interface
 declare global {
   namespace Express {
     interface Request {
