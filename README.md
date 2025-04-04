@@ -1,8 +1,10 @@
 # Bates Solutions : Common
 
+Common components to use with Express projects
+
 ## Publishing to NPM
 
-First (manual ) publish to `npm` should specify if the package will be public
+The first (manual) publish to `npm` should specify if the package visibility is public
 
 `npm publish --access public`
 
