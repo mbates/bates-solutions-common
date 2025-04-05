@@ -3,7 +3,7 @@
 Common components to use with Express projects
 
 This repository is part of a this simple microservices example group:
- * [Microservices : Monorepo Example](https://github.com/mbates/bates-solutions-example)
+ * [Microservices : Example Monorepo](https://github.com/mbates/bates-solutions-example)
  * [Microservices : Example Common Components](https://github.com/mbates/bates-solutions-example-common)
  * [Microservices : Global Common Components](https://github.com/mbates/bates-solutions-common)
 
