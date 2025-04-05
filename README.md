@@ -1,4 +1,4 @@
-# Bates Solutions : Common
+# Microservices : Global Common Components
 
 Common components to use with Express projects
 
